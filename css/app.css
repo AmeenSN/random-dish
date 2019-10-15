@@ -29,6 +29,15 @@ body {
     vertical-align: middle;
 }
 
+.center1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 50%;
+
+}
+
 .fish {
     background-image: url("img/fish.png");
     background-repeat: no-repeat;
