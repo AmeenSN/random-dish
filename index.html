@@ -3,27 +3,56 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>وشو اسوي غداء</title>
     <link rel="stylesheet" href="css/app.css">
-
 </head>
 
 <body>
 
-    <h1 class="center1">
-        choose the a meat to include?
-    </h1>
-    <div class="center">
+    <main class="page">
 
-        <div class="meat fish">
+        <header class="header">
+            <h1>وشو اسوي غداء؟</h1>
+            <p class="subtitle">Choose the meat to include</p>
+        </header>
+
+        <div class="meats">
+
+            <button type="button" class="meat fish" data-protein="fish" aria-pressed="false">
+                <span class="meat-label">Fish</span>
+            </button>
+
+            <button type="button" class="meat shrimp" data-protein="shrimp" aria-pressed="false">
+                <span class="meat-label">Shrimp</span>
+            </button>
+
+            <button type="button" class="meat chicken" data-protein="chicken" aria-pressed="false">
+                <span class="meat-label">Chicken</span>
+            </button>
+
+            <button type="button" class="meat steak" data-protein="beef" aria-pressed="false">
+                <span class="meat-label">Beef</span>
+            </button>
+
         </div>
-        <div class="meat shrimp">
+
+        <div class="controls">
+            <button type="button" id="pick" class="pick-button" disabled>Pick a dish</button>
+            <button type="button" id="clear" class="clear-button" hidden>Clear</button>
+            <p class="hint" id="hint" aria-live="polite"></p>
         </div>
-        <div class="meat chicken">
-        </div>
-        <div class="meat steak">
-        </div>
-    </div>
+
+        <section class="result" id="result" aria-live="polite" hidden>
+            <p class="result-label">Tonight's dish</p>
+            <p class="dish-name" id="dish-name"></p>
+            <p class="dish-protein" id="dish-protein"></p>
+        </section>
+
+    </main>
+
+    <script src="js/dishes.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
